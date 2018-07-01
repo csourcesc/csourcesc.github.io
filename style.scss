@@ -155,7 +155,8 @@ img {
   margin-bottom: 50px;
 }
 
-.masthead {
+header {
+	color #FFFFFF;
   background-color: #227bd7;
 
   @include mobile {
