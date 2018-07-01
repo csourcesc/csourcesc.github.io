@@ -12,15 +12,16 @@
 /**************/
 /* BASE RULES */
 /**************/
-
+* {
+	font-family: "Oswald", sans-serif;
+	font-size: 18px;
+}
 html {
   font-size: 100%;
 }
 
 body {
 	background: $white;
-  font-family: "Oswald", sans-serif;
-	font-size: 18px;
   color: $darkGray;
 }
 
