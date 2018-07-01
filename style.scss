@@ -8,7 +8,6 @@
 @import "reset";
 @import "variables";
 // Syntax highlighting @import is at the bottom of this file
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 /**************/
 /* BASE RULES */
 /**************/
@@ -20,7 +19,7 @@ html {
 }
 
 body {
-	font-family: "Oswald", sans-serif !important;
+	font-family: $helvetica;
 	font-size: 18px;
 	background: $white;
   color: $darkGray;
@@ -156,7 +155,8 @@ img {
 }
 
 header {
-	color #FFFFFF !important;
+	color: #FFFFFF !important;
+	width: 100%;
   background-color: #227bd7;
 
   @include mobile {
