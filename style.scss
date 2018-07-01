@@ -155,10 +155,6 @@ img {
 }
 
 header {
-	color: $white !important;
-	width: 100%;
-  background-color: #227bd7;
-
   @include mobile {
     text-align: center;
   }
