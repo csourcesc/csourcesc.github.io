@@ -12,6 +12,8 @@ description: Offical blog for CatSource
 # Flags below are optional
 #
 
+logo: logo.svg
+
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
