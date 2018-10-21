@@ -1,5 +1,5 @@
 ---
-title: Csourcesc.Github.Io
+title: CatSource Blog
 timezone: UTC
 collections:
   posts:
@@ -12,22 +12,11 @@ name: CatSource Blog
 description: Offical blog for CatSource
 logo: logo.svg
 footer-links:
-  dribbble: 
-  email: 
-  facebook: 
-  flickr: 
   github: csourcesc
-  instagram: 
-  linkedin: 
-  pinterest: 
   rss: 
-  twitter: 
-  stackoverflow: 
-  youtube: 
-  googleplus: 
 disqus: 
 url: csourcesc.github.io
-baseurl: ''
+baseurl: 
 permalink: "/:title/"
 version: v1.2.0
 kramdown:
@@ -36,7 +25,7 @@ kramdown:
   syntax_highlighter_opts:
     css_class: highlight
 sass:
-  style: :expanded
+  style: expanded
 gems:
 - jekyll-sitemap
 - jekyll-feed
