@@ -13,7 +13,7 @@ description: Offical blog for CatSource
 logo: logo.svg
 footer-links:
   github: csourcesc
-  rss: 
+  rss: "/feed.xml"
 disqus: 
 url: csourcesc.github.io
 baseurl: 
