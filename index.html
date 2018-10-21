@@ -7,7 +7,7 @@ layout: default
     <article class="post">
       {% unless page.image == "" %}
       <img src="{{ site.baseurl }}/images/{{ post.image }}">
-      {% endif %}
+      {% endunless %}
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
