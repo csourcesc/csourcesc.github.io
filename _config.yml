@@ -35,3 +35,5 @@ exclude:
 - LICENSE
 - README.md
 - CNAME
+feed:
+  url: ""
