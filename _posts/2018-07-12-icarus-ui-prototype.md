@@ -7,8 +7,6 @@ layout: post
 
 [View the prototype](https://thimbleprojects.org/locness/511071/)
 
-## Updates
-
 * **July 12, 2018** : Added ***header autohide***
 
 * **July 29, 2018** : Edited dropdown animation
