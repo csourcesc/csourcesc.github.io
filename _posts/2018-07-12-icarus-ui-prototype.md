@@ -5,8 +5,6 @@ image: csourcedesign.png
 layout: post
 ---
 
-# Current prototype
-
 [View the prototype](https://thimbleprojects.org/locness/511071/)
 
 ## Updates
@@ -20,6 +18,8 @@ layout: post
 * **September 1, 2018** : Added fake login
 
 * **September 21, 2018** : Some changes so that you can go back to top on iOS using the status bar.
+
+* **December 5, 2018** : We are now using the [Materialize](https://materializecss.com) CSS framework.
 
 # Old design project
 
