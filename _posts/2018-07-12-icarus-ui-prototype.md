@@ -19,6 +19,8 @@ layout: post
 
 * **December 5, 2018** : We are now using the [Materialize](https://materializecss.com) CSS framework.
 
+* **December 15, 2018** : Some effect on sprite cards hover
+
 # Old design project
 
 ![The design]({{ site.baseurl% }}/images/csourcedesign.png)
