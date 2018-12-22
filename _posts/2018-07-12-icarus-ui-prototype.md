@@ -23,6 +23,8 @@ layout: post
 
 * **The prototype has moved to Glitch, since Thimble is shutting down.**
 
+* **December 22, 2018** : Improved accessibility (so color change)
+
 # Old design project
 
 ![The design]({{ site.baseurl% }}/images/csourcedesign.png)
