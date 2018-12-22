@@ -21,6 +21,8 @@ layout: post
 
 * **December 15, 2018** : Some effect on sprite cards hover
 
+* **The prototype has moved to Glitch, since Thimble is shutting down.**
+
 # Old design project
 
 ![The design]({{ site.baseurl% }}/images/csourcedesign.png)
