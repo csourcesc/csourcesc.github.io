@@ -5,7 +5,7 @@ image: csourcedesign.png
 layout: post
 ---
 
-[View the prototype](https://thimbleprojects.org/locness/511071/)
+[View the prototype](https://icarus-ui-test.glitch.me)
 
 * **July 12, 2018** : Added ***header autohide***
 
