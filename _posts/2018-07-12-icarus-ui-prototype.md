@@ -1,6 +1,6 @@
 ---
 title: The Icarus UI prototype
-date: 2018-07-12 00:00:00 Z
+date: 2019-01-30 00:00:00 Z
 image: "/uploads/catsource-icarus-screenshot.png"
 layout: post
 ---
