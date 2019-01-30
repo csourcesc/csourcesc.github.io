@@ -1,9 +1,15 @@
 ---
-title: Icarus UI prototype updates
+title: The Icarus UI prototype
 date: 2018-07-12 00:00:00 Z
 image: csourcedesign.png
 layout: post
 ---
+
+We have started thinking about the future of CatSource, since, let's agree, the current site isn't really well made, and requires an email, which Scratch Team doesn't really appreciate.
+
+I, Locness, started making a design concept.
+
+!\[The old design concept\]({{ site.baseurl% }}/images/csourcedesign.png)
 
 [View the prototype](https://icarus-ui-test.glitch.me)
 
@@ -27,6 +33,6 @@ layout: post
 
 # Old design project
 
-![The design]({{ site.baseurl% }}/images/csourcedesign.png)
+!\[The design\]({{ site.baseurl% }}/images/csourcedesign.png)
 
 *We update this post regularly*
