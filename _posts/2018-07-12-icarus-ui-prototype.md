@@ -33,6 +33,7 @@ Now, I made a prototype interface (so it doesn't work), which can be seen [here]
 
 * **December 22, 2018** : Improved accessibility (so color changes)
 
-* January 30, 2019 : Now, the fake login doesn't change page. We plan to use localStorage so it remembers when you've fake-logged-in. Except a future update. Happy new year 2019!
+* **January 30, 2019** : Now, the fake login doesn't change page. We plan to use localStorage so it remembers when you've fake-logged-in. Except a future update. Happy new year 2019!
 
+* **February 3, 2019** : We are proud to announce the **notifications dropdown**! 🎉
 *We update this post regularly*
