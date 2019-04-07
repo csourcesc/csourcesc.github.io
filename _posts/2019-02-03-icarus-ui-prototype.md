@@ -1,6 +1,6 @@
 ---
 title: The Icarus UI prototype
-date: 2018-07-12 00:00:00 Z
+date: 2019-02-03 00:00:00 Z
 image: "/uploads/catsource-icarus-screenshot.png"
 layout: post
 ---
@@ -9,11 +9,15 @@ We have started thinking about the future of CatSource, since, let's agree, the 
 
 I, Locness, started making a design concept.
 
-![The old design concept]({{ site.baseurl% }}/images/csourcedesign.png)
+!\[The old design concept\]({{ site.baseurl% }}/images/csourcedesign.png)
 
 Now, I made a prototype interface (so it doesn't work), which can be seen [here](https://icarus-ui-test.glitch.me). Please give feedback on Framavox, or on the [Padlet](https://padlet.com/csource/main)  if you don't have / don't want to give an email (We totally respect your choice, and will never focus more on Framavox messages than Padlet ones or vice versa)
 
 ## Changelog
+
+**Check out the changelog [here](https://headwayapp.co/catsource-icarus-prototype-changelog).**
+
+Below is the old changelog, for possible future references.
 
 * **July 12, 2018** : Added ***header autohide***
 
@@ -36,4 +40,5 @@ Now, I made a prototype interface (so it doesn't work), which can be seen [here]
 * **January 30, 2019** : Now, the fake login doesn't change page. We plan to use localStorage so it remembers when you've fake-logged-in. Except a future update. Happy new year 2019!
 
 * **February 3, 2019** : We are proud to announce the **notifications dropdown**! 🎉
+
 *We update this post regularly*
