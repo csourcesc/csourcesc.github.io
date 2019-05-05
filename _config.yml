@@ -14,7 +14,7 @@ logo: logo.svg
 footer-links:
   github: csourcesc
   rss: "/feed.xml"
-disqus: 
+comments: true
 url: csourcesc.github.io
 baseurl: 
 permalink: "/:title/"
