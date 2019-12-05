@@ -4,10 +4,20 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The title of the article.
+  hidden: false
+  config:
+    required: true
 - type: datetime
   name: date
-  label: date
+  label: Date
+  config:
+    display_utc: false
+    required: true
+  description: The date of publishing/writing.
+  default: now
 - type: file
   name: image
-  label: image
+  label: Cover image
+  description: An image representing the article.
