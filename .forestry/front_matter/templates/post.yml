@@ -21,3 +21,5 @@ fields:
   name: image
   label: Cover image
   description: An image representing the article.
+pages:
+- _posts/new-things-are-coming-soon-keep-an-eye-on-the-blog.md
