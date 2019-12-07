@@ -1,9 +1,9 @@
 ---
 title: Some updates to the blog
-date: 2018-10-21 09:18:00 Z
+date: 2018-10-21T09:18:00.000+00:00
 image: "/images/milivoj-kuhar-543074-unsplash.jpg"
----
 
+---
 Recently, we made some updates to this blog : 
 
 - Changed header
