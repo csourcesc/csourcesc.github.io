@@ -19,6 +19,13 @@ url: csourcesc.github.io
 baseurl: 
 permalink: "/:title/"
 version: v1.2.0
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
 kramdown:
   input: GFM
   syntax_highlighter: rouge
