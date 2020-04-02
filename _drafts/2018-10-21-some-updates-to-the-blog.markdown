@@ -2,6 +2,7 @@
 title: Some updates to the blog
 date: 2018-10-21T09:18:00.000+00:00
 image: "/images/milivoj-kuhar-543074-unsplash.jpg"
+author: The CatSource Team
 
 ---
 Recently, we made some updates to this blog : 

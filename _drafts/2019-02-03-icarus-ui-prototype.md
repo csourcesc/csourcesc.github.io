@@ -2,7 +2,7 @@
 title: The Icarus UI prototype
 date: 2019-02-03T00:00:00.000+00:00
 image: "/uploads/catsource-icarus-screenshot.png"
-layout: post
+author: Locness
 
 ---
 We have started thinking about the future of CatSource, since, let's agree, the current site isn't really well made, and requires an email, which Scratch Team doesn't really appreciate.
