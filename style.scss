@@ -34,7 +34,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
-  font-weight: bold;
+  font-family: $oswald;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -47,6 +47,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
   a {
     color: inherit;
   }
@@ -70,11 +72,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $primary;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $primary;
   }
 }
 
@@ -226,7 +228,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $primary;
     }
   }
 }
