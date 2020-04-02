@@ -156,6 +156,10 @@ img {
   margin-bottom: 50px;
 }
 
+.wrapper-masthead .container {
+  background-color: $accent;
+}
+
 header {
   @include mobile {
     text-align: center;
@@ -199,7 +203,7 @@ header {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: $accent;
   font-size: 16px;
 
   @include mobile {
