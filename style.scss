@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	font-family: $helvetica;
+	font-family: $inter;
 	font-size: 18px;
 	background: $white;
   color: $darkGray;
@@ -124,11 +124,11 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
+  color: $primary;
   background: $lightGray;
 }
 ::selection {
-  color: $black;
+  color: $primary;
   background: $lightGray;
 }
 
