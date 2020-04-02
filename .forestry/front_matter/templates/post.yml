@@ -17,6 +17,13 @@ fields:
     required: true
   description: The date of publishing/writing.
   default: now
+- name: author
+  type: text
+  config:
+    required: true
+  label: Author(s)
+  description: Who wrote this post?
+  default: The CatSource Team
 - type: file
   name: image
   label: Cover image
