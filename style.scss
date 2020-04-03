@@ -124,12 +124,12 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $primary;
-  background: $lightGray;
+  color: $white;
+  background: $accent;
 }
 ::selection {
-  color: $primary;
-  background: $lightGray;
+  color: $white;
+  background: $accent;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -201,7 +201,6 @@ header {
   color: $gray;
   margin: -5px 0 0 0;
   font-size: 16px;
-  
 
   @include mobile {
     margin: 3px 0;
@@ -263,6 +262,11 @@ nav {
   }
 
   .read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: $accent;
     text-transform: uppercase;
     font-size: 15px;
   }
@@ -272,35 +276,35 @@ nav {
     position: relative;
     padding: 100px;
     text-align: center;
-	background-position: center;
-	background-size: cover;
+    background-position: center;
+    background-size: cover;
 }
 
 .overlay {
-    position: absolute;
-    left:  0;
-    top:  0;
-    width:  100%;
-    height: 100% !important;
-    background-color: rgba(0, 0, 0, 0.43);
-    z-index:  0;
-    color: #ffffff !important;
+  position: absolute;
+  left:  0;
+  top:  0;
+  width:  100%;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.43);
+  z-index:  0;
+  color: #ffffff !important;
 }
 
 .overlay-content-text {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .post-title {
-    color:  #ffffff;
+  color:  #ffffff;
 }
 
 .overlay-content {
-    display: table;
-    height:  100%;
-    width: 100%;
-    text-align: center;
+  display: table;
+  height:  100%;
+  width: 100%;
+  text-align: center;
 }
 
 .wrapper-footer {
