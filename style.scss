@@ -198,9 +198,10 @@ header {
 }
 
 .site-description {
+  color: $gray;
   margin: -5px 0 0 0;
-  color: $accent;
   font-size: 16px;
+  
 
   @include mobile {
     margin: 3px 0;
