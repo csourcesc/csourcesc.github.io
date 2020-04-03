@@ -21,6 +21,7 @@ html {
 body {
 	font-family: $inter;
 	font-size: 18px;
+  line-height: 1.7;
 	background: $white;
   color: $darkGray;
 }
@@ -289,6 +290,7 @@ nav {
   bottom: 0;
   margin: 15px;
   padding: 0 15px;
+  line-height: 1;
   background-color: $accent;
   border-radius: 10px;
 }
