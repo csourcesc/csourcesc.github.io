@@ -19,6 +19,16 @@
   </head>
 
   <body>
+
+  <div class="privacy-banner js-privacy-banner has-accent-background">
+    <div>
+      <h2>Privacy information</h2>
+      <p>We use Matomo hosted on a little Raspberry Pi for analytics.
+      <a href="https://matomo.org/faq/how-to/faq_25918/" target="_blank" rel="noopener">Know what it collects</a> (the only optional feature we use is Site Search) or <a href="javascript:matomoOptOut()">opt-out</a>.</p>
+      <button class="privacy-banner-close js-privacy-banner-close">&times;</button>
+    </div>
+  </div>
+
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
@@ -46,6 +56,25 @@
     <script src="https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js"></script>
     <script>
         scratchblocks.renderMatching('pre.ScratchBlocks', {style: "scratch3"});
+    </script>
+
+    <!-- Matomo opt-out -->
+    <script>
+      function matomoOptOut() {
+        window.open("https://locness.hopto.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300")
+      }
+    </script>
+
+    <!-- Close privacy banner -->
+    <script>
+      function closePrivacyBanner() {
+        document.querySelector(".js-privacy-banner").style.display = "none";
+        localStorage.setItem("hidePrivacyBanner", "true")
+      }
+      if (localStorage.getItem("hidePrivacyBanner") === "true") {
+        document.querySelector(".js-privacy-banner").style.display = "none";
+      }
+      document.querySelector(".js-privacy-banner-close").addEventListener("click", closePrivacyBanner);
     </script>
   </body>
 </html>

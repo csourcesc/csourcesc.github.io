@@ -133,6 +133,10 @@ img {
   background: $accent;
 }
 
+.has-accent-background ::-moz-selection, .has-accent-background ::selection {
+  background-color: $primary;
+}
+
 // Nicolas Gallagher's micro clearfix hack
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
@@ -148,6 +152,45 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
+
+.privacy-banner {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  max-width: 600px;
+  padding: 5px 15px;
+  z-index: 9999;
+  color: $white;
+  background-color: $accent;
+  border-radius: 15px;
+}
+
+.privacy-banner > div {
+  position: relative;
+}
+
+.privacy-banner h2 {
+  color: inherit;
+  margin-top: 0;
+}
+
+.privacy-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.privacy-banner-close {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  font-size: 1.7em;
+  color: white;
+  background-color: transparent;
+}
 
 //
 // .masthead
@@ -293,10 +336,6 @@ nav {
   line-height: 1;
   background-color: $accent;
   border-radius: 10px;
-}
-
-.overlay ::-moz-selection, .overlay ::selection {
-  background-color: $primary;
 }
 
 .post-title {
