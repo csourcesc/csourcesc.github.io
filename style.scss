@@ -19,8 +19,9 @@ html {
 }
 
 body {
-	font-family: $helvetica;
+	font-family: $inter;
 	font-size: 18px;
+  line-height: 1.7;
 	background: $white;
   color: $darkGray;
 }
@@ -34,7 +35,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $darkerGray;
-  font-weight: bold;
+  font-family: $oswald;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -47,6 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
   a {
     color: inherit;
   }
@@ -70,11 +73,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $primary;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $primary;
   }
 }
 
@@ -122,12 +125,16 @@ img {
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $black;
-  background: $lightGray;
+  color: $white;
+  background: $accent;
 }
 ::selection {
-  color: $black;
-  background: $lightGray;
+  color: $white;
+  background: $accent;
+}
+
+.has-accent-background ::-moz-selection, .has-accent-background ::selection {
+  background-color: $primary;
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -145,6 +152,45 @@ img {
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
+
+.privacy-banner {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  max-width: 600px;
+  padding: 5px 15px;
+  z-index: 9999;
+  color: $white;
+  background-color: $accent;
+  border-radius: 15px;
+}
+
+.privacy-banner > div {
+  position: relative;
+}
+
+.privacy-banner h2 {
+  color: inherit;
+  margin-top: 0;
+}
+
+.privacy-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.privacy-banner-close {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  font-size: 1.7em;
+  color: white;
+  background-color: transparent;
+}
 
 //
 // .masthead
@@ -196,8 +242,8 @@ header {
 }
 
 .site-description {
-  margin: -5px 0 0 0;
   color: $gray;
+  margin: -5px 0 0 0;
   font-size: 16px;
 
   @include mobile {
@@ -226,7 +272,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $primary;
     }
   }
 }
@@ -259,45 +305,46 @@ nav {
     margin-top: 10px;
   }
 
+  .post-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
   .read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    background-color: $accent;
     text-transform: uppercase;
     font-size: 15px;
   }
 }
 
 .post-head {
-    position: relative;
-    padding: 100px;
-    text-align: center;
-	background-position: center;
-	background-size: cover;
+  position: relative;
 }
 
 .overlay {
-    position: absolute;
-    left:  0;
-    top:  0;
-    width:  100%;
-    height: 100% !important;
-    background-color: rgba(0, 0, 0, 0.43);
-    z-index:  0;
-    color: #ffffff !important;
-}
-
-.overlay-content-text {
-    display: table-cell;
-    vertical-align: middle;
+  position: absolute;
+  left:  0;
+  bottom: 0;
+  margin: 15px;
+  padding: 0 15px;
+  line-height: 1;
+  background-color: $accent;
+  border-radius: 10px;
 }
 
 .post-title {
-    color:  #ffffff;
+  margin: 0;
+  color: $white;
 }
 
-.overlay-content {
-    display: table;
-    height:  100%;
-    width: 100%;
-    text-align: center;
+.post-date {
+  color: $white;
 }
 
 .wrapper-footer {

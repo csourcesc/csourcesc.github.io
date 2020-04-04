@@ -9,8 +9,10 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <link rel="styleshet" href="https://rsms.me/inter/inter.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet"> 
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml">
     <link rel="icon" sizes="100x100" href="{{ site.baseurl }}/icon.png">
     
     <!-- Matomo -->
@@ -33,12 +35,21 @@
   </head>
 
   <body>
+
+  <div class="privacy-banner js-privacy-banner has-accent-background">
+    <div>
+      <h2>Privacy information</h2>
+      <p>We use Matomo hosted on a little Raspberry Pi for analytics.
+      <a href="https://matomo.org/faq/how-to/faq_25918/" target="_blank" rel="noopener">Know what it collects</a> (the only optional feature we use is Site Search) or <a href="javascript:matomoOptOut()">opt-out</a>.</p>
+      <button class="privacy-banner-close js-privacy-banner-close">&times;</button>
+    </div>
+  </div>
+
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/"><img src="{{ site.bseurl }}/images/{{ site.logo }}" alt="{{ site.name }}"></a></h1>
+            <h1 class="site-name"><a href="{{ site.baseurl }}/"><img src="{{ site.bseurl }}/{{ site.logo }}" alt="{{ site.name }}"></a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
         </header>
@@ -61,6 +72,25 @@
     <script src="https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js"></script>
     <script>
         scratchblocks.renderMatching('pre.ScratchBlocks', {style: "scratch3"});
+    </script>
+
+    <!-- Matomo opt-out -->
+    <script>
+      function matomoOptOut() {
+        window.open("https://locness.hopto.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300")
+      }
+    </script>
+
+    <!-- Close privacy banner -->
+    <script>
+      function closePrivacyBanner() {
+        document.querySelector(".js-privacy-banner").style.display = "none";
+        localStorage.setItem("hidePrivacyBanner", "true")
+      }
+      if (localStorage.getItem("hidePrivacyBanner") === "true") {
+        document.querySelector(".js-privacy-banner").style.display = "none";
+      }
+      document.querySelector(".js-privacy-banner-close").addEventListener("click", closePrivacyBanner);
     </script>
   </body>
 </html>

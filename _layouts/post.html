@@ -2,18 +2,17 @@
 layout: default
 ---
 
-<div class="post-head" style="background-image: url('{{ site.baseurl }}{{ page.image }}');">
-	<div class="overlay">
-		<div class="overlay-content">
-			<div class="overlay-content-text">
-				<h1 class="post-title">{{ page.title }}</h1>
-				<p class="post-date">Written by {{ page.author }} on {{ page.date | date: "%B %e, %Y" }}</p>
-    		</div>
-		</div>
-	</div>
-</div>
+
 <article class="post">
-  
+  <div class="post-head">
+    <img class="post-image" src="{{site.baseurl}}/{{page.image}}" alt="{{post.title}}, post image">
+    <div class="overlay has-accent-background">
+      <div class="overlay-content">
+				  <h1 class="post-title">{{ page.title }}</h1>
+				  <p class="post-date">Written by {{ page.author }} on {{ page.date | date: "%B %e, %Y" }}</p>
+		  </div>
+	  </div>
+  </div>
 
   <div class="entry">
     {{ content }}

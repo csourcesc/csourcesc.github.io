@@ -1,5 +1,5 @@
 ---
-title: CatSource Blog
+title: CatSource
 timezone: UTC
 collections:
   posts:
@@ -8,8 +8,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-name: CatSource Blog
-description: Offical blog for CatSource
+name: CatSource
+description: Tutorials, resources and more, for Scratchers, by Scratchers.
 logo: logo.svg
 footer-links:
   github: csourcesc
