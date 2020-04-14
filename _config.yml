@@ -15,7 +15,7 @@ footer-links:
   github: csourcesc
   rss: "/feed.xml"
 comments: true
-url: csourcesc.github.io
+url: https://csourcesc.github.io
 baseurl: 
 permalink: "/:title/"
 version: v1.2.0
