@@ -94,7 +94,9 @@
     </script>
 
     <!-- emojicom.io widget -->
+    {% if page.layout == "post"}
     <script>window.emojicom_widget = { campaign: "0Os8JVOslDrBh2rTw3QG" };</script>
-    <script src="https://cdn.emojicom.io/embed/widget.js" async></script>
+    <script src="https://cdn.emojicom.io/embed/widget.js"></script>
+    {% endif %}
   </body>
 </html>
