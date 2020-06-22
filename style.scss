@@ -12,18 +12,18 @@
 /* BASE RULES */
 /**************/
 * {
-	
+
 }
 html {
   font-size: 100%;
 }
 
 body {
-	font-family: $inter;
+	font-family: var(--inter);
 	font-size: 18px;
   line-height: 1.7;
-	background: $white;
-  color: $darkGray;
+	background: var(--white);
+  color: var(--grayple);
 }
 
 .container {
@@ -34,8 +34,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $darkerGray;
-  font-family: $oswald;
+  color: var(--darkGrayple);
+  font-family: var(--oswald);
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -65,7 +65,7 @@ h3 {
 
 h4 {
   font-size: 18px;
-  color: $gray;
+  color: var(--lightGrayple);
 }
 
 p {
@@ -73,11 +73,11 @@ p {
 }
 
 a {
-  color: $primary;
+  color: var(--primary);
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $primary;
+    color: var(--primary);
   }
 }
 
@@ -120,21 +120,21 @@ img {
 }
 
 .date {
-  color: $gray;
+  color: var(--lightGrayple);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $white;
-  background: $accent;
+  color: var(--white);
+  background: var(--accent);
 }
 ::selection {
-  color: $white;
-  background: $accent;
+  color: var(--white);
+  background: var(--accent);
 }
 
 .has-accent-background ::-moz-selection, .has-accent-background ::selection {
-  background-color: $primary;
+  background-color: var(--primary);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -160,8 +160,8 @@ img {
   max-width: 600px;
   padding: 5px 15px;
   z-index: 9999;
-  color: $white;
-  background-color: $accent;
+  color: var(--white);
+  background-color: var(--accent);
   border-radius: 15px;
 }
 
@@ -235,14 +235,14 @@ header {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: var(--darkGrayple);
   cursor: pointer;
   font-size: 28px;
   letter-spacing: 1px;
 }
 
 .site-description {
-  color: $gray;
+  color: var(--lightGrayple);
   margin: -5px 0 0 0;
   font-size: 16px;
 
@@ -265,14 +265,14 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: var(--grayple);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
 
     @include mobile {
       margin: 0 10px;
-      color: $primary;
+      color: var(--primary);
     }
   }
 }
@@ -283,7 +283,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--lightGrayple);
 }
 
 .posts > .post:last-child {
@@ -294,9 +294,9 @@ nav {
 .post {
   blockquote {
     margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    border-left: 2px solid var(--lightGrayple);
     padding: 0.1em 1em;
-    color: $gray;
+    color: var(--lightGrayple);
     font-size: 22px;
     font-style: italic;
   }
@@ -317,7 +317,7 @@ nav {
     padding: 10px 15px;
     border-radius: 5px;
     color: white;
-    background-color: $accent;
+    background-color: var(--accent);
     text-transform: uppercase;
     font-size: 15px;
   }
@@ -334,24 +334,24 @@ nav {
   margin: 15px;
   padding: 0 15px;
   line-height: 1;
-  background-color: $accent;
+  background-color: var(--accent);
   border-radius: 10px;
 }
 
 .post-title {
   margin: 0;
-  color: $white;
+  color: var(--white);
 }
 
 .post-date {
-  color: $white;
+  color: var(--white);
 }
 
 .wrapper-footer {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: var(--lightGrayple);
 }
 
 footer {
