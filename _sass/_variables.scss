@@ -2,24 +2,24 @@
 //
 // VARIABLES
 //
+:root {
+  // Colors
+  --primary: #4b00cc;
+  --accent: #00ccad;
 
-// Colors
-$primary: #4b00cc;
-$accent: #00ccad;
+  // Grays
+  --darkGrayple: #0d0024;
+  --grayple: #15003a;
+  --lightGrayple: #675f74;
+  --white: #fff;
 
-// Grays
-$darkerGray: #0d0024;
-$darkGray: #15003a;
-$gray: #675f74;
-$lightGray: #eee;
-$white: #fff;
-
-// Font stacks
-$oswald: "Oswald", sans-serif;
-$inter: "Inter", sans-serif;
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+  // Font stacks
+  --oswald: "Oswald", sans-serif;
+  --inter: "Inter", sans-serif;
+  --helvetica: Helvetica, Arial, sans-serif;
+  --helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --georgia: Georgia, serif;
+}
 
 // Mobile breakpoints
 @mixin mobile {
