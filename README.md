@@ -1,3 +1,3 @@
-<p align="center"><img src="logo-readme.png" alt="CatSource"></p>
+<img src="logo-readme.png" alt="CatSource"></p>
 
-_Tutorials, resources and more, for Scratchers, by Scratchers._
+CatSource is a blog for tutorials, resources and more, for Scratchers.
