@@ -1,3 +1,4 @@
 <img src="logo-readme.png" alt="CatSource"></p>
 
-CatSource is a blog for tutorials, resources and more, for Scratchers.
+CatSource is an open-source blog for tutorials, resources and more, for Scratch.  
+It is build on Jekyll (ruby).
