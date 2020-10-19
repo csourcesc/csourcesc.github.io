@@ -5,9 +5,10 @@ collections:
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
+  images:
+    title: Images
     output: true
+collections_dir: content
 name: CatSource
 description: Tutorials, resources and more, for Scratchers, by Scratchers.
 logo: logo.svg
