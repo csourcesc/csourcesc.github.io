@@ -140,7 +140,7 @@ img {
   z-index: 9999;
   color: var(--gray1);
   background-color: var(--gray5);
-  box-shadow: -4px 4px 6px #80808033; // gray3 but with 20% alpha
+  box-shadow: 0 4px 6px #80808033; // gray3 but with 20% alpha
   border-radius: 15px;
 
   @include mobile {
