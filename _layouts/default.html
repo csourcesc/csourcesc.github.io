@@ -5,13 +5,9 @@
 
     {% include meta.html %}
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
-    <link rel="styleshet" href="https://rsms.me/inter/inter.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css"> 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml">
     <link rel="icon" sizes="100x100" href="{{ site.baseurl }}/icon.png">
     
@@ -44,29 +40,29 @@
       <button class="privacy-banner-close js-privacy-banner-close">&times;</button>
     </div>
   </div>
-
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/"><img src="{{ site.bseurl }}/{{ site.logo }}" alt="{{ site.name }}"></a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-        </header>
+    <header class="masthead container">
+      <div class="site-info">
+        <h1 class="site-name">
+          <a href="{{ site.baseurl }}/">
+            <!--<img src="{{ site.bseurl }}/{{ site.logo }}"
+              alt="{{ site.name }}">-->
+            {{ site.name }}
+          </a>
+        </h1>
+        <p class="site-description">{{ site.description }}</p>
       </div>
-    </div>
+    </header>
 
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
+      
+      <footer class="footer">
+        <div class="container">
           {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+        </div>
+      </footer>
 
     <!-- scratchblocks - https://github.com/scratchblocks/scratchblocks -->
     <script src="https://scratchblocks.github.io/js/scratchblocks-v3.4-min.js"></script>
