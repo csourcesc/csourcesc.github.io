@@ -146,7 +146,7 @@ img {
   @include mobile {
     right: 0;
     bottom: 0;
-    box-shadow: 0 4px 6px #80808033; 
+    box-shadow: 0 -4px 6px #80808033; 
     border-radius: 15px 15px 0;
   }
 }
