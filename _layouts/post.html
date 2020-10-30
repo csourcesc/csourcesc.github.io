@@ -15,6 +15,7 @@ layout: default
   </div>
 
   <div class="post-details">
+    <!-- Categories -->
     {% if page.categories[0] %}
     <div>
       {% include icons/folder.html %}
@@ -29,12 +30,28 @@ layout: default
       {% endfor %}
     </div>
     {% endif %}
+    <!-- Difficulty -->
     {% if page.difficulty %}
     <div>
       {% include icons/circle-double.html %}
       {{ page.difficulty }}
     </div>
     {% endif %}
+    <!-- Tags -->
+    {% if page.tags[0] and include.display_tags != false %}
+    <div>
+      {% include icons/tag-multiple.html %}
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">
+        {{ tag }}
+      </a>
+      {% unless forloop.last == true %}
+      ,&nbsp;
+      {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!-- Author -->
     {% if page.author %}
     <div>
       {% include icons/account-edit.html %}
