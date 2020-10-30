@@ -17,6 +17,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 html {
@@ -25,7 +26,6 @@ html {
 
 body {
 	font-family: var(--inter);
-	font-size: 18px;
   line-height: 1.7;
 	background: white;
   color: var(--gray2);
@@ -124,6 +124,32 @@ img {
 
 svg {
   display: inline-block;
+}
+
+.btn {
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: var(--primary1);
+  background-color: var(--gray5);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+
+  &:hover, &:active {
+    color: var(--primary3);
+    background-color: var(--gray4);
+  };
+
+  &.primary {
+    color: white;
+    background-color: var(--primary2);
+
+    &:hover, &:active {
+      background-color: var(--primary1);
+    }
+  }
 }
 
 // Specify the color of the selection
@@ -288,21 +314,6 @@ svg {
   .post-details div:not(:first-child) {
     margin-left: 15px;
   }
-
-  .read-more {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 15px;
-    color: white;
-    background-color: var(--primary2);
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 30px;
-
-    &:hover, &:active {
-      background-color: var(--primary1);
-    }
-  }
 }
 
 .post-head {
@@ -323,6 +334,20 @@ svg {
 
 .post-title {
   margin-top: 15px;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.author-intro {
+  margin-bottom: 50px;
 }
 
 footer {
