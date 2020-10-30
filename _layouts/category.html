@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h1>{{ page.category_name }}</h1>
+<div class="posts">
+    {% for post in site.posts %}{% if post.categories contains page.category_name %}
+        {% include list-post.html display_categories=false %}
+    {% endif %}{% endfor %}
+</div>

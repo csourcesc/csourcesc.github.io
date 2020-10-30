@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h1>{% include icons/account-edit.html %}{{ page.author_name }}</h1>
+{{ content }}
+<div class="posts">
+    {% for post in site.posts %}{% if post.author == page.author_name %}
+        {% include list-post.html display_author=false %}
+    {% endif %}{% endfor %}
+</div>

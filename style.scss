@@ -42,6 +42,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--oswald);
   margin: 1em 0 15px;
   padding: 0;
+
+  svg {
+    color: var(--gray3);
+    margin-right: 10px;
+  }
 }
 
 h2, h3, h4, h5, h6 {
@@ -88,11 +93,11 @@ a {
   color: var(--primary2);
   text-decoration-color: currentColor;
   text-decoration-style: dotted;
-  &:hover, &:active {
-    color: var(--primary1);
-  }
   &:visited {
     color: var(--gray3);
+  }
+  &:hover, &:active {
+    color: var(--primary1);
   }
 }
 
@@ -115,6 +120,10 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+
+svg {
+  display: inline-block;
 }
 
 // Specify the color of the selection
@@ -260,6 +269,24 @@ img {
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  .post-details, .post-details div {
+    display: flex;
+    align-items: center;
+  }
+
+  .post-details a:not(:hover):not(:active) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .post-details svg {
+    margin-right: 5px;
+  }
+
+  .post-details div:not(:first-child) {
+    margin-left: 15px;
   }
 
   .read-more {

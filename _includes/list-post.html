@@ -1,0 +1,38 @@
+<article class="post">
+    <img class="post-image" src="{{ site.baseurl }}/{{ post.image }}" alt="{{post.title}}, post image">
+    <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <div class="post-details">
+        {% if post.categories[0]  and include.display_categories != false %}
+        <div>
+            {% include icons/folder.html %}
+            {% comment %}{{ post.categories | join: ", " }}{% endcomment %}
+            {% for category in post.categories %}
+                <a href="{{ site.baseurl }}/categories/{{ category | downcase }}">
+                    {{ category }}
+                </a>
+                {% unless forloop.last == true %}
+                ,&nbsp;
+                {% endunless %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% if post.difficulty %}
+        <div>
+            {% include icons/circle-double.html %}
+            {{ post.difficulty }}
+        </div>
+        {% endif %}
+        {% if post.author and include.display_author != false %}
+        <div>
+            {% include icons/account-edit.html %}
+            <a href="{{ site.baseurl }}/authors/{{ post.author }}">{{ post.author }}</a>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="entry">
+        {{ post.excerpt }}
+    </div>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+</article>

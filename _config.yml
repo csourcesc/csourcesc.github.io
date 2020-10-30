@@ -8,6 +8,12 @@ collections:
   images:
     title: Images
     output: true
+  authors:
+    title: Authors
+    output: true
+  categories:
+    title: Categories
+    output: true
 collections_dir: content
 name: CatSource
 description: Tutorials, resources and more, for Scratchers, by Scratchers.
@@ -27,6 +33,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "author"
+    values:
+      layout: "author"
 kramdown:
   input: GFM
   syntax_highlighter: rouge
