@@ -17,6 +17,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 html {
@@ -25,7 +26,6 @@ html {
 
 body {
 	font-family: var(--inter);
-	font-size: 18px;
   line-height: 1.7;
 	background: white;
   color: var(--gray2);
@@ -42,6 +42,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--oswald);
   margin: 1em 0 15px;
   padding: 0;
+
+  svg {
+    color: var(--gray3);
+    margin-right: 10px;
+  }
 }
 
 h2, h3, h4, h5, h6 {
@@ -88,11 +93,11 @@ a {
   color: var(--primary2);
   text-decoration-color: currentColor;
   text-decoration-style: dotted;
-  &:hover, &:active {
-    color: var(--primary1);
-  }
   &:visited {
     color: var(--gray3);
+  }
+  &:hover, &:active {
+    color: var(--primary1);
   }
 }
 
@@ -115,6 +120,36 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+}
+
+.btn {
+  -webkit-appearance: none;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: var(--primary1);
+  background-color: var(--gray5);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+
+  &:hover, &:active {
+    color: var(--primary3);
+    background-color: var(--gray4);
+  };
+
+  &.primary {
+    color: white;
+    background-color: var(--primary2);
+
+    &:hover, &:active {
+      background-color: var(--primary1);
+    }
+  }
 }
 
 // Specify the color of the selection
@@ -262,19 +297,22 @@ img {
     border-radius: 10px;
   }
 
-  .read-more {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 15px;
-    color: white;
-    background-color: var(--primary2);
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 30px;
+  .post-details, .post-details div {
+    display: flex;
+    align-items: center;
+  }
 
-    &:hover, &:active {
-      background-color: var(--primary1);
-    }
+  .post-details a:not(:hover):not(:active) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .post-details svg {
+    margin-right: 5px;
+  }
+
+  .post-details div:not(:first-child) {
+    margin-left: 15px;
   }
 }
 
@@ -296,6 +334,20 @@ img {
 
 .post-title {
   margin-top: 15px;
+}
+
+.author-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+.author-intro {
+  margin-bottom: 50px;
 }
 
 footer {

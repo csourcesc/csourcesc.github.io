@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="author-header">
+    <h1>
+        {% include icons/account-edit.html %}{{ page.author_name }}
+    </h1>
+    {% if page.scratch_url %}
+    <a href="{{ page.scratch_url }}" class="btn primary">Follow on Scratch</a>
+    {% endif %}
+</div>
+<div class="author-intro">
+    {{ content }}
+</div>
+<div class="posts">
+    {% for post in site.posts %}{% if post.author == page.author_name %}
+        {% include list-post.html display_author=false %}
+    {% endif %}{% endfor %}
+</div>

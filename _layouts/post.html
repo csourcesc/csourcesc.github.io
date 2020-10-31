@@ -5,13 +5,59 @@ layout: default
 
 <article class="post">
   <div class="post-head">
-    <img class="post-image" src="{{site.baseurl}}/{{page.image}}" alt="{{post.title}}, post image">
+    <img class="post-image" src="{{site.baseurl}}/{{page.image}}" alt="{{page.title}}, post image">
     <div class="overlay has-accent-background">
       <div class="overlay-content">
-				  <h1 class="post-title">{{ page.title }}</h1>
-				  <p class="post-date">Written by {{ page.author }} on {{ page.date | date: "%B %e, %Y" }}</p>
-		  </div>
-	  </div>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-date">Written by {{ page.author }} on {{ page.date | date: "%B %e, %Y" }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-details">
+    <!-- Categories -->
+    {% if page.categories[0] %}
+    <div>
+      {% include icons/folder.html %}
+      {% comment %}{{ page.categories | join: ", " }}{% endcomment %}
+      {% for category in page.categories %}
+      <a href="{{ site.baseurl }}/category/{{ category | downcase }}">
+        {{ category }}
+      </a>
+      {% unless forloop.last == true %}
+      ,&nbsp;
+      {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!-- Difficulty -->
+    {% if page.difficulty %}
+    <div>
+      {% include icons/circle-double.html %}
+      {{ page.difficulty }}
+    </div>
+    {% endif %}
+    <!-- Tags -->
+    {% if page.tags[0] and include.display_tags != false %}
+    <div>
+      {% include icons/tag-multiple.html %}
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag }}">
+        {{ tag }}
+      </a>
+      {% unless forloop.last == true %}
+      ,&nbsp;
+      {% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!-- Author -->
+    {% if page.author %}
+    <div>
+      {% include icons/account-edit.html %}
+      <a href="{{ site.baseurl }}/authors/{{ page.author }}">{{ page.author }}</a>
+    </div>
+    {% endif %}
   </div>
 
   <div class="entry">
