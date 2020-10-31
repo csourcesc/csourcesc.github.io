@@ -11,9 +11,6 @@ collections:
   authors:
     title: Authors
     output: true
-  categories:
-    title: Categories
-    output: true
 collections_dir: content
 name: CatSource
 description: Tutorials, resources and more, for Scratchers, by Scratchers.
@@ -46,9 +43,10 @@ kramdown:
     css_class: highlight
 sass:
   style: expanded
-gems:
+plugins:
 - jekyll-sitemap
 - jekyll-feed
+- jekyll-archives
 exclude:
 - Gemfile
 - Gemfile.lock
@@ -57,3 +55,10 @@ exclude:
 - CNAME
 feed:
   url: 'https://csourcesc.github.io/feed.xml'
+jekyll-archives:
+  enabled: 
+    - categories
+    - tags
+  layouts:
+    category: category
+    tag: tag

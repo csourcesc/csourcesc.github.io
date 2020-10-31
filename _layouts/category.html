@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<h1>{{ page.category_name }}</h1>
+<h1>{% include icons/folder.html %}{{ page.title }}</h1>
 <div class="posts">
-    {% for post in site.posts %}{% if post.categories contains page.category_name %}
-        {% include list-post.html display_categories=false %}
-    {% endif %}{% endfor %}
+    {% for post in page.posts %}
+        {% include list-post.html %}
+    {% endfor %}
 </div>
