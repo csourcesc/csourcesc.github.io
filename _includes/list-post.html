@@ -8,7 +8,7 @@
             {% include icons/folder.html %}
             {% comment %}{{ post.categories | join: ", " }}{% endcomment %}
             {% for category in post.categories %}
-                <a href="{{ site.baseurl }}/categories/{{ category | downcase }}">
+                <a href="{{ site.baseurl }}/category/{{ category | downcase }}">
                     {{ category }}
                 </a>
                 {% unless forloop.last == true %}
