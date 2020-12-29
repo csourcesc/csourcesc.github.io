@@ -14,7 +14,7 @@ layout: default
       {% include icons/folder.html %}
       {% comment %}{{ page.categories | join: ", " }}{% endcomment %}
       {% for category in page.categories %}
-      <a href="{{ site.baseurl }}/category/{{ category | downcase }}">
+      <a href="{{ site.baseurl }}/category/{{ category | slugify }}">
         {{ category }}
       </a>
       {% unless forloop.last == true %}
@@ -35,7 +35,7 @@ layout: default
     <div>
       {% include icons/tag-multiple.html %}
       {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag }}">
+      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
         {{ tag }}
       </a>
       {% unless forloop.last == true %}

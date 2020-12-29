@@ -8,7 +8,7 @@
             {% include icons/folder.html %}
             {% comment %}{{ post.categories | join: ", " }}{% endcomment %}
             {% for category in post.categories %}
-                <a href="{{ site.baseurl }}/category/{{ category | downcase }}">
+                <a href="{{ site.baseurl }}/category/{{ category | slugify }}">
                     {{ category }}
                 </a>
                 {% unless forloop.last == true %}
@@ -29,7 +29,7 @@
         <div>
             {% include icons/tag-multiple.html %}
             {% for tag in post.tags %}
-                <a href="{{ site.baseurl }}/tag/{{ tag }}">
+                <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
                     {{ tag }}
                 </a>
                 {% unless forloop.last == true %}
