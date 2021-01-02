@@ -1,0 +1,6 @@
+{% if include.type %}
+{% capture class_name %}callout--{{ include.type }}{% endcapture %}
+{% endif %}
+<p class="callout {{ class_name }}">
+    {% if class_name %}{% include icons/callout/{{class_name}}.html %}{% endif %}{{ include.content }}
+</p>
