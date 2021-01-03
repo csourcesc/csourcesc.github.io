@@ -1,0 +1,30 @@
+.callout {
+    padding: 15px;
+    background-color: var(--gray5);
+    border-radius: 10px;
+
+    &.callout--tip {
+        color: var(--yellow1);
+        background-color: var(--yellow5);
+    }
+
+    &.callout--warn {
+        color: var(--orange1);
+        background-color: var(--orange5);
+    }
+
+    &.callout--info {
+        color: var(--blue1);
+        background-color: var(--blue5);
+    }
+
+    &.callout--danger {
+        color: var(--red1);
+        background-color: var(--red5);
+    }
+
+    svg {
+        vertical-align: middle;
+        margin-right: 15px;
+    }
+}
