@@ -140,7 +140,7 @@ svg {
   color: var(--primary1);
   background-color: var(--gray5);
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   border-radius: 30px;
 
   &:hover, &:active {
