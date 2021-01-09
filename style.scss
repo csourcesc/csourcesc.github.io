@@ -142,10 +142,13 @@ svg {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 30px;
+  border: none;
 
   &:hover, &:active {
     color: var(--primary3);
     background-color: var(--gray4);
+    text-decoration: none;
+    cursor: pointer;
   };
 
   &.primary {
