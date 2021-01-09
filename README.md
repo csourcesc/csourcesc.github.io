@@ -25,5 +25,5 @@ It is build on Jekyll (ruby).
 # Run
 1. Build the site and serve it  
 `bundle exec jekyll serve`
-2. In your browser, go to
+2. In your browser, go to  
 `http://localhost:4000`
