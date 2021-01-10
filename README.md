@@ -3,6 +3,8 @@
 CatSource is an open-source blog for tutorials about, resources and more for the [Scratch](https://scratch.mit.edu) coding program.  
 It is built as a static website on Jekyll (ruby), hosted on GitHub Pages.
 
+The blog's posts are in the [content submodule](https://github.com/csourcesc/posts).
+
 # Installation
 
 These instructions are based upon Jekyll's [Quickstart guide](https://jekyllrb.com/docs/).
@@ -21,7 +23,7 @@ More information and how to install them at [Jekyll's docs](https://jekyllrb.com
 `gem install jekyll bundler`
 3. Go to the directory  
 `cd csourcesc.github.io`
-4. Install dependencies 
+4. Install dependencies  
 `bundle install`
 
 # Run
