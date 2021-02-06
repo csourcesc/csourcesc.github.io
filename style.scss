@@ -162,6 +162,10 @@ svg {
     display: block;
     width: 100%;
   }
+
+  svg {
+    vertical-align: middle;
+  }
 }
 
 // Specify the color of the selection
