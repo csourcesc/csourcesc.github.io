@@ -3,7 +3,7 @@
 CatSource is an open-source blog for tutorials about, resources and more for the [Scratch](https://scratch.mit.edu) coding program.  
 It is built as a static website on Jekyll (ruby), hosted on GitHub Pages.
 
-The al the content is in the [content submodule](https://github.com/csourcesc/posts).
+All the content is in the [content submodule](https://github.com/csourcesc/posts).
 
 # Installation
 
