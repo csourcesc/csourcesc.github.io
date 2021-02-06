@@ -334,6 +334,12 @@ svg {
   .post-load-additionnal {
     display: flex;
   }
+  
+  .post-license {
+    margin: 50px 0;
+    color: var(--gray3);
+    text-align: center;
+  }
 }
 
 .post-title {
