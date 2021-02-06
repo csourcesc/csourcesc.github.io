@@ -57,11 +57,9 @@ layout: default
     {% include license.html %}
   </div>
 
-  {% include post-additionnal.html %}
-
   <div class="post-load-additionnal">
-    <button class="btn block js-load-emojicom">😍🙂🙁😭 How was this article?</button>
-    <button class="btn block js-load-utterances">💬 View comments</button>
+    <button class="btn block js-load-emojicom">{% include icons/emoticon.html %} Give feedback</button>
+    <button class="btn block js-load-utterances">{% include icons/forum.html %} Discuss this post</button>
   </div>
   <script>
     document.querySelector(".js-load-emojicom").addEventListener("click", function(e) {
@@ -72,7 +70,7 @@ layout: default
       e.target.textContent = "Loading...";
 
       emojicomScript.addEventListener("load", function() {
-        e.target.style.display = "none";
+        document.querySelector(".js-load-emojicom").style.display = "none";
       })
     })
 
@@ -89,8 +87,10 @@ layout: default
       e.target.textContent = "Loading...";
 
       utterancesScript.addEventListener("load", function() {
-        e.target.style.display = "none";
+        document.querySelector(".js-load-utterances").style.display = "none";
       })
     })
   </script>
+
+  {% include post-additionnal.html %}
 </article>
