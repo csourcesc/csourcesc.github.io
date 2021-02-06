@@ -136,6 +136,7 @@ svg {
   -webkit-appearance: none;
   display: inline-block;
   padding: 10px 15px;
+  border: none;
   font-size: 15px;
   color: var(--primary1);
   background-color: var(--gray5);
@@ -155,6 +156,11 @@ svg {
     &:hover, &:active {
       background-color: var(--primary1);
     }
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -297,6 +303,28 @@ svg {
 
   .post-details div:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .post-load-additionnal {
+    display: flex;
+
+    .btn:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+
+      .btn:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  
+  .post-license {
+    margin: 50px 0;
+    color: var(--gray3);
+    text-align: center;
   }
 }
 

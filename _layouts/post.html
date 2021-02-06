@@ -54,8 +54,43 @@ layout: default
 
   <div class="entry">
     {{ content }}
-    <div id="emojicom-widget-inline"></div>
+    {% include license.html %}
   </div>
 
-  {% include comments.html %}
+  {% include post-additionnal.html %}
+
+  <div class="post-load-additionnal">
+    <button class="btn block js-load-emojicom">😍🙂🙁😭 How was this article?</button>
+    <button class="btn block js-load-utterances">💬 View comments</button>
+  </div>
+  <script>
+    document.querySelector(".js-load-emojicom").addEventListener("click", function(e) {
+      const emojicomScript = document.createElement("script");
+      emojicomScript.src = "https://cdn.emojicom.io/embed/widget.js";
+
+      document.body.appendChild(emojicomScript);
+      e.target.textContent = "Loading...";
+
+      emojicomScript.addEventListener("load", function() {
+        e.target.style.display = "none";
+      })
+    })
+
+    document.querySelector(".js-load-utterances").addEventListener("click", function(e) {
+      const utterancesScript = document.createElement("script");
+      utterancesScript.src = "https://utteranc.es/client.js";
+      utterancesScript.setAttribute("repo", "csourcesc/csourcesc.github.io");
+      utterancesScript.setAttribute("issue-term", "pathname");
+      utterancesScript.setAttribute("label", "_websitecomment");
+      utterancesScript.setAttribute("theme", "github-light");
+      utterancesScript.setAttribute("crossorigin", "anonymous");
+
+      document.querySelector("#utterances").appendChild(utterancesScript);
+      e.target.textContent = "Loading...";
+
+      utterancesScript.addEventListener("load", function() {
+        e.target.style.display = "none";
+      })
+    })
+  </script>
 </article>
