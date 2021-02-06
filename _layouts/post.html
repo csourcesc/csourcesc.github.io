@@ -13,19 +13,16 @@ layout: default
     <div>
       {% include icons/folder.html %}
       {% comment %}{{ page.categories | join: ", " }}{% endcomment %}
+      <noscript>Categories:</noscript>
       {% for category in page.categories %}
-      <a href="{{ site.baseurl }}/category/{{ category | slugify }}">
-        {{ category }}
-      </a>
-      {% unless forloop.last == true %}
-      ,&nbsp;
-      {% endunless %}
+        <a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last == true %},&nbsp;{% endunless %}
       {% endfor %}
     </div>
     {% endif %}
     <!-- Difficulty -->
     {% if page.difficulty %}
     <div>
+      <noscript>Difficulty:</noscript>
       {% include icons/circle-double.html %}
       {{ page.difficulty }}
     </div>
@@ -33,20 +30,17 @@ layout: default
     <!-- Tags -->
     {% if page.tags[0] and include.display_tags != false %}
     <div>
+      <noscript>Tags:</noscript>
       {% include icons/tag-multiple.html %}
       {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
-        {{ tag }}
-      </a>
-      {% unless forloop.last == true %}
-      ,&nbsp;
-      {% endunless %}
+        <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last == true %},&nbsp;{% endunless %}
       {% endfor %}
     </div>
     {% endif %}
     <!-- Author -->
     {% if page.author %}
     <div>
+      <noscript>Author:</noscript>
       {% include icons/account-edit.html %}
       <a href="{{ site.baseurl }}/authors/{{ page.author }}">{{ page.author }}</a>
     </div>
