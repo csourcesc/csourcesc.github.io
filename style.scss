@@ -333,6 +333,18 @@ svg {
 
   .post-load-additionnal {
     display: flex;
+
+    .btn:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+
+      .btn:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
   }
   
   .post-license {
