@@ -37,7 +37,7 @@
       <h2>Privacy information</h2>
       <p>We are managing our own analytics using Matomo.
       <a href="https://matomo.org/faq/general/faq_18254/" target="_blank" rel="noopener">Know what it collects</a>.</p>
-      <button onclick="matomoOptOut();closePrivacyBanner()" class="btn">Reject</button>
+      <button class="btn js-privacy-banner-close js-matomo-opt-out">Reject</button>
       <button class="btn js-privacy-banner-close">Accept</button>
     </div>
   </div>
@@ -87,7 +87,10 @@
       if (localStorage.getItem("hidePrivacyBanner") === "true") {
         document.querySelector(".js-privacy-banner").style.display = "none";
       }
-      document.querySelector(".js-privacy-banner-close").addEventListener("click", closePrivacyBanner);
+      document.querySelectorAll(".js-privacy-banner-close").forEach(btn => {
+        btn.addEventListener("click", closePrivacyBanner);
+      };
+      document.querySelector(".js-matomo-opt-out").addEventListener("click", matomoOptOut);
     </script>
 
     {% if page.layout == "post" %}
