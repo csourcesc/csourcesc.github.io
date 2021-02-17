@@ -211,22 +211,19 @@ svg {
   margin-top: 0;
 }
 
-.privacy-banner a {
-  color: inherit;
-  text-decoration: underline;
-}
-
 .privacy-banner-close {
   -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-left: auto;
   border: none;
   font-size: 1.7em;
   color: inherit;
   background-color: transparent;
+  
+  @include mobile {
+    margin-right: auto;
+  }
 }
 
 //
