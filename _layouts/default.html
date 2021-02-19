@@ -84,10 +84,10 @@
     <script>
       function closePrivacyBanner(e) {
         document.querySelector(".js-privacy-banner").style.display = "none";
-        localStorage.setItem("hidePrivacyBanner", "true")
+        localStorage.setItem("hidePrivacyBanner", 1)
       }
 
-      if (localStorage.getItem("hidePrivacyBanner") === "true") {
+      if (localStorage.getItem("hidePrivacyBanner") == 1) {
         document.querySelector(".js-privacy-banner").style.display = "none";
       }
 
