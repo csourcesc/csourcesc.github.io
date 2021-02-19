@@ -13,19 +13,16 @@ layout: default
     <div>
       {% include icons/folder.html %}
       {% comment %}{{ page.categories | join: ", " }}{% endcomment %}
+      <noscript>Categories:</noscript>
       {% for category in page.categories %}
-      <a href="{{ site.baseurl }}/category/{{ category | slugify }}">
-        {{ category }}
-      </a>
-      {% unless forloop.last == true %}
-      ,&nbsp;
-      {% endunless %}
+        <a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>{% unless forloop.last == true %},&nbsp;{% endunless %}
       {% endfor %}
     </div>
     {% endif %}
     <!-- Difficulty -->
     {% if page.difficulty %}
     <div>
+      <noscript>Difficulty:</noscript>
       {% include icons/circle-double.html %}
       {{ page.difficulty }}
     </div>
@@ -33,20 +30,17 @@ layout: default
     <!-- Tags -->
     {% if page.tags[0] and include.display_tags != false %}
     <div>
+      <noscript>Tags:</noscript>
       {% include icons/tag-multiple.html %}
       {% for tag in page.tags %}
-      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">
-        {{ tag }}
-      </a>
-      {% unless forloop.last == true %}
-      ,&nbsp;
-      {% endunless %}
+        <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}">{{ tag }}</a>{% unless forloop.last == true %},&nbsp;{% endunless %}
       {% endfor %}
     </div>
     {% endif %}
     <!-- Author -->
     {% if page.author %}
     <div>
+      <noscript>Author:</noscript>
       {% include icons/account-edit.html %}
       <a href="{{ site.baseurl }}/authors/{{ page.author }}">{{ page.author }}</a>
     </div>
@@ -60,8 +54,43 @@ layout: default
 
   <div class="entry">
     {{ content }}
-    <div id="emojicom-widget-inline"></div>
+    {% include license.html %}
   </div>
 
-  {% include comments.html %}
+  <div class="post-load-additionnal">
+    <button class="btn block js-load-emojicom">{% include icons/emoticon.html %} Give feedback</button>
+    <button class="btn block js-load-utterances">{% include icons/forum.html %} Discuss this post</button>
+  </div>
+  <script>
+    document.querySelector(".js-load-emojicom").addEventListener("click", function(e) {
+      const emojicomScript = document.createElement("script");
+      emojicomScript.src = "https://cdn.emojicom.io/embed/widget.js";
+
+      document.body.appendChild(emojicomScript);
+      e.target.textContent = "Loading...";
+
+      emojicomScript.addEventListener("load", function() {
+        document.querySelector(".js-load-emojicom").style.display = "none";
+      })
+    })
+
+    document.querySelector(".js-load-utterances").addEventListener("click", function(e) {
+      const utterancesScript = document.createElement("script");
+      utterancesScript.src = "https://utteranc.es/client.js";
+      utterancesScript.setAttribute("repo", "csourcesc/csourcesc.github.io");
+      utterancesScript.setAttribute("issue-term", "pathname");
+      utterancesScript.setAttribute("label", "_websitecomment");
+      utterancesScript.setAttribute("theme", "github-light");
+      utterancesScript.setAttribute("crossorigin", "anonymous");
+
+      document.querySelector("#utterances").appendChild(utterancesScript);
+      e.target.textContent = "Loading...";
+
+      utterancesScript.addEventListener("load", function() {
+        document.querySelector(".js-load-utterances").style.display = "none";
+      })
+    })
+  </script>
+
+  {% include post-additionnal.html %}
 </article>

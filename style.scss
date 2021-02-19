@@ -136,6 +136,7 @@ svg {
   -webkit-appearance: none;
   display: inline-block;
   padding: 10px 15px;
+  border: none;
   font-size: 15px;
   font-family: inherit;
   color: var(--primary1);
@@ -159,6 +160,15 @@ svg {
     &:hover, &:active {
       background-color: var(--primary1);
     }
+  }
+
+  &.block {
+    display: block;
+    width: 100%;
+  }
+
+  svg {
+    vertical-align: middle;
   }
 }
 
@@ -210,6 +220,21 @@ svg {
   text-decoration: underline;
 }
 
+.privacy-banner-close {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin-left: auto;
+  border: none;
+  font-size: 1.7em;
+  color: inherit;
+  background-color: transparent;
+  
+  @include mobile {
+    margin-right: auto;
+  }
+}
+
 //
 // .masthead
 //
@@ -243,32 +268,6 @@ svg {
     margin: 3px 0;
   }
 }
-
-/*nav {
-  float: right;
-  margin-top: 23px;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: var(--grayple);
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
-
-    @include mobile {
-      margin: 0 10px;
-      color: var(--primary);
-    }
-  }
-}*/
 
 //
 // .main
@@ -314,6 +313,28 @@ svg {
 
   .post-details div:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .post-load-additionnal {
+    display: flex;
+
+    .btn:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+
+      .btn:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  
+  .post-license {
+    margin: 50px 0;
+    color: var(--gray3);
+    text-align: center;
   }
 }
 
