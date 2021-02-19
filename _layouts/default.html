@@ -74,23 +74,27 @@
     <!-- Matomo opt-out -->
     <script>
       function matomoOptOut() {
-        window.open("https://locness.duckdns.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300")
+        window.open("https://locness.duckdns.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300");
       }
+
+      document.querySelector(".js-matomo-opt-out").addEventListener("click", matomoOptOut);
     </script>
 
     <!-- Close privacy banner -->
     <script>
-      function closePrivacyBanner() {
+      function closePrivacyBanner(e) {
         document.querySelector(".js-privacy-banner").style.display = "none";
         localStorage.setItem("hidePrivacyBanner", "true")
       }
+
       if (localStorage.getItem("hidePrivacyBanner") === "true") {
         document.querySelector(".js-privacy-banner").style.display = "none";
       }
-      document.querySelectorAll(".js-privacy-banner-close").forEach(btn => {
-        btn.addEventListener("click", closePrivacyBanner);
-      };
-      document.querySelector(".js-matomo-opt-out").addEventListener("click", matomoOptOut);
+
+      const pbClose = document.querySelectorAll(".js-privacy-banner-close");
+      for (var i = 0; i < pbClose.length; i++) {
+        pbClose[i].addEventListener("click", closePrivacyBanner);
+      }
     </script>
 
     {% if page.layout == "post" %}
