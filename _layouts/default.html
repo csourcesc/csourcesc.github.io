@@ -35,9 +35,10 @@
   <div class="privacy-banner js-privacy-banner has-accent-background">
     <div>
       <h2>Privacy information</h2>
-      <p>We use Matomo hosted on a little Raspberry Pi for analytics.
-      <a href="https://matomo.org/faq/general/faq_18254/" target="_blank" rel="noopener">Know what it collects</a> (the only optional feature we use is Site Search) or <a href="javascript:matomoOptOut()">opt-out</a>.</p>
-      <button class="privacy-banner-close js-privacy-banner-close">&times;</button>
+      <p>We are managing our own analytics using Matomo.
+      <a href="https://matomo.org/faq/general/faq_18254/" target="_blank" rel="noopener">Know what it collects</a>.</p>
+      <button class="btn js-privacy-banner-close js-matomo-opt-out">Reject</button>
+      <button class="btn js-privacy-banner-close">Accept</button>
     </div>
   </div>
     <header class="masthead container">
@@ -73,20 +74,27 @@
     <!-- Matomo opt-out -->
     <script>
       function matomoOptOut() {
-        window.open("https://locness.duckdns.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300")
+        window.open("https://locness.duckdns.org/matomo/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=&fontColor=&fontSize=&fontFamily=", "Tracking Opt-Out", "width=400,height=300");
       }
+
+      document.querySelector(".js-matomo-opt-out").addEventListener("click", matomoOptOut);
     </script>
 
     <!-- Close privacy banner -->
     <script>
-      function closePrivacyBanner() {
+      function closePrivacyBanner(e) {
         document.querySelector(".js-privacy-banner").style.display = "none";
-        localStorage.setItem("hidePrivacyBanner", "true")
+        localStorage.setItem("hidePrivacyBanner", 1)
       }
-      if (localStorage.getItem("hidePrivacyBanner") === "true") {
+
+      if (localStorage.getItem("hidePrivacyBanner") == 1) {
         document.querySelector(".js-privacy-banner").style.display = "none";
       }
-      document.querySelector(".js-privacy-banner-close").addEventListener("click", closePrivacyBanner);
+
+      const pbClose = document.querySelectorAll(".js-privacy-banner-close");
+      for (var i = 0; i < pbClose.length; i++) {
+        pbClose[i].addEventListener("click", closePrivacyBanner);
+      }
     </script>
   </body>
 </html>
