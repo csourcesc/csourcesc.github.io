@@ -138,15 +138,19 @@ svg {
   padding: 10px 15px;
   border: none;
   font-size: 15px;
+  font-family: inherit;
   color: var(--primary1);
   background-color: var(--gray5);
   text-transform: uppercase;
   text-decoration: none !important;
   border-radius: 30px;
+  border: none;
 
   &:hover, &:active {
     color: var(--primary3);
     background-color: var(--gray4);
+    text-decoration: none;
+    cursor: pointer;
   };
 
   &.primary {
