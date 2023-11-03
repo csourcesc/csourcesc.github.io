@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://csourcesc.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://csourcesc.github.io/" rel="alternate" type="text/html" /><updated>2023-11-03T17:44:45+00:00</updated><id>https://csourcesc.github.io/feed.xml</id><title type="html">CatSource</title><subtitle>Tutorials, resources and more, for Scratchers, by Scratchers.</subtitle><entry><title type="html">Getting started with Cloud Data : creating a global high score</title><link href="https://csourcesc.github.io/clouddata-global-highscore/" rel="alternate" type="text/html" title="Getting started with Cloud Data : creating a global high score" /><published>2020-12-29T13:30:00+00:00</published><updated>2020-12-29T13:30:00+00:00</updated><id>https://csourcesc.github.io/clouddata-global-highscore</id><content type="html" xml:base="https://csourcesc.github.io/clouddata-global-highscore/">&lt;p&gt;So you made a great game, and you want to know who’s the best at playing it.&lt;/p&gt;
+
+&lt;p&gt;Well, you will share it on Scratch, and you’ll add a High Score variable, and if Score is more than High Score then set High Score to Score. This should work, right? If you test it you’ll see it does. But… not really. It will not work with other people, except if you play in the offline editor or on the same account.&lt;/p&gt;
+
+&lt;p&gt;Why? Because, when &lt;em&gt;you&lt;/em&gt;, on your account or offline, change the variable’s value, &lt;strong&gt;Scratch will think you made a change to your project&lt;/strong&gt;, so it will save it. But other people aren’t able to modify your project, so it won’t save for them.&lt;/p&gt;
+
+&lt;h2 id=&quot;this-is-where-cloud-data-comes-in&quot;&gt;This is where Cloud Data comes in!&lt;/h2&gt;
+
+&lt;p&gt;Cloud Data lets you create &lt;strong&gt;global, shared variables&lt;/strong&gt;, that everyone (with a Scratcher rank, see below) can modify, which you can use to save a global high score.&lt;/p&gt;
+
+&lt;p&gt;To be able to use Cloud Data, &lt;strong&gt;you need to have a Scratcher rank on the Scratch website.&lt;/strong&gt; This applies to you and to those who play your project : they can’t change these variables without the Scratcher rank.&lt;/p&gt;
+
+&lt;!-- To be wrapped in a callout --&gt;
+&lt;p&gt;Cloud Data variables can only be numbers, and cloud lists aren’t a thing, but there are workarounds which I won’t cover here yet.&lt;/p&gt;
+
+&lt;p&gt;To have this Scratcher rank, you have to be active in the Scratch community, have a verified email address, and at least 2 shared projects. More on that &lt;a href=&quot;https://en.scratch-wiki.info/wiki/New_Scratcher_Status#Requirements_for_becoming_a_Scratcher&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now, let’s get started and create a simple highscore system!&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-a-cloud-variable&quot;&gt;Creating a cloud variable&lt;/h2&gt;
+
+&lt;p&gt;First, open your project. Go to Variables and click &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Make a Variable&lt;/code&gt;. Name the variable &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;High Score&lt;/code&gt;. &lt;strong&gt;Be sure to check &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cloud variable (stored on server)&lt;/code&gt;&lt;/strong&gt;, otherwise it will not be a cloud variable.&lt;/p&gt;
+
+&lt;p&gt;You will see the variable alongside other variables, and its name will be preceded with a ☁︎ symbol. This means it’s a cloud variable.&lt;/p&gt;
+
+&lt;p&gt;Now, at the end of the game, do a check to verify if the score is superior to the high score, and if yes, update the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;High Score&lt;/code&gt; variable, just like you would do as usual.&lt;/p&gt;
+
+&lt;p&gt;As you can see, Cloud Data is really easy to get started with.&lt;/p&gt;</content><author><name>locness3</name></author><category term="Tutorials" /><category term="Tutorials/Cloud Data" /><category term="cloud" /><category term="cloud data" /><category term="high score" /><category term="ranking" /><category term="scratcher rank" /><summary type="html">You want to show the highest score ever made in your game. Well, you just add a High Score variable, and if Score &gt; High Score then set High Score to Score. That should work, right? Well, not really... Read on to find out more.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://csourcesc.github.io/images/c-dustin-K-Iog-Bqf8E-unsplash.jpg" /><media:content medium="image" url="https://csourcesc.github.io/images/c-dustin-K-Iog-Bqf8E-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to make smooth animations in Scratch</title><link href="https://csourcesc.github.io/how-to-make-smooth-animations/" rel="alternate" type="text/html" title="How to make smooth animations in Scratch" /><published>2020-05-06T16:26:22+00:00</published><updated>2020-05-06T16:26:22+00:00</updated><id>https://csourcesc.github.io/how-to-make-smooth-animations</id><content type="html" xml:base="https://csourcesc.github.io/how-to-make-smooth-animations/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In Scratch, the most common way to grow a sprite is using &lt;strong&gt;change size&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+change size by ()
+&lt;/pre&gt;
+
+&lt;p&gt;And the most common way to move a sprite is using &lt;strong&gt;glide&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+glide () secs to x:() y:()
+&lt;/pre&gt;
+
+&lt;p&gt;Using these methods for animations like clicking a button or showing a logo is not really good.&lt;br /&gt;
+Here, i use another method, that I call “smooth animation”.&lt;br /&gt;
+In short, a “smooth animation” is when the sprite’s movement speed varies in the animation, which is better than one of the “animating” methods showed before.
+Here we’ll see how to make a smooth animation for changing the size of a sprite.&lt;/p&gt;
+
+&lt;h2 id=&quot;explaining-by-an-example--changing-size&quot;&gt;Explaining by an example : changing size&lt;/h2&gt;
+&lt;p&gt;First, let’s set the beginning size.&lt;br /&gt;
+Then, we open a loop where, at each iteration, we make our sprite grow by the size you want to get minus your current size, divided by your speed.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+repeat (100)
+change size by (((endSize) - (size)) * (speed)) 
+end
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt; :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The &lt;strong&gt;lower is the speed&lt;/strong&gt;, the more you have to &lt;strong&gt;repeat the loop&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;speed&lt;/strong&gt; should be a number between 0 and 1.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Why do we do this ?&lt;/strong&gt;&lt;br /&gt;
+Doing the current size minus the wanted size will do the difference between these two. Knowing that difference, we multiply it by a non integer number, so we divide it, to split the difference in mutliple parts, who get smaller as the animation moves on; that’s what makes the “smooth” effect.&lt;/p&gt;
+
+&lt;p&gt;Here is an example :&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+set size to (50)%
+repeat (100)
+change size by (((200) - (size)) * (0.3)) 
+end
+&lt;/pre&gt;
+
+&lt;h2 id=&quot;do-what-you-want-&quot;&gt;Do what you want !&lt;/h2&gt;
+&lt;p&gt;You can now change that code to use it for something else, like the position.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+go to x: (beginX) y: (beginY)
+repeat (100)
+change x by (((endX) - (x position)) * (speed)) 
+change Y by (((endY) - (y position)) * (speed)) 
+end
+&lt;/pre&gt;
+&lt;p&gt;Now have fun with that !&lt;br /&gt;
+&lt;em&gt;Thank you for reading this article :3&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Article written by &lt;a href=&quot;https://scratch.mit.edu/users/delnyn/&quot;&gt;delnyn&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content><author><name>delnyn</name></author><category term="Tutorials" /><category term="Tutorials/Polishing and Small Touches" /><category term="smooth" /><category term="animation" /><category term="transition" /><category term="movement" /><category term="ui" /><category term="user interface" /><summary type="html">Learn how to create smooth movement animation, that nicely transitions from one state to another.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://csourcesc.github.io/images/Smooth-Anim.png" /><media:content medium="image" url="https://csourcesc.github.io/images/Smooth-Anim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to create gravity in Scratch</title><link href="https://csourcesc.github.io/how-to-create-gravity-in-scratch/" rel="alternate" type="text/html" title="How to create gravity in Scratch" /><published>2020-04-02T11:53:21+00:00</published><updated>2020-04-02T11:53:21+00:00</updated><id>https://csourcesc.github.io/how-to-create-gravity-in-scratch</id><content type="html" xml:base="https://csourcesc.github.io/how-to-create-gravity-in-scratch/">&lt;h2 id=&quot;explanation&quot;&gt;Explanation&lt;/h2&gt;
+
+&lt;p&gt;To create gravity in scratch we first need to understand how gravity acts in the real world. If you have an apple and you drop from high up what happens? Well the speed (or velocity) of the apple increases towards objects exerting gravity - in proportion to mass - until it reaches terminal velocity or hits something.&lt;/p&gt;
+
+&lt;p&gt;Let’s start by simplifying this a bit. Most gravity will come from the earth - so we will ignore other objects. The earth will always be at the bottom of the screen. There will also be no terminal velocity.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-physics-in-scratch&quot;&gt;Basic Physics in Scratch&lt;/h2&gt;
+
+&lt;p&gt;Create a sprite for the object you want to fall (or use one you already have).&lt;/p&gt;
+
+&lt;p&gt;First, we will need to create a variable for the current velocity of the sprite.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+(Y Velocity)
+&lt;/pre&gt;
+
+&lt;p&gt;We want the y position of the sprite to change by its y velocity every frame. We can do that with this simple loop. You probably want to attach a when green flag clicked block on top of this.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+forever
+  change y by (Y Velocity)
+end
+&lt;/pre&gt;
+
+&lt;p&gt;That’s great but it doesn’t do anything. This is because Y Velocity stays at zero. To make gravity we need to add a change Y Velocity by block and put a negative number in (so the sprite goes down the screen). Put this in the forever loop.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+change [Y Velocity v] by (-3)
+&lt;/pre&gt;
+
+&lt;p&gt;Things also slow down due to air resistance. For this I just set Y Velocity to 80% (multiplied by 0.8) of what it was. You can change that if you want. We will add this code into the forever loop.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+set [Y Velocity v] to ((Y Velocity) * (-8))
+&lt;/pre&gt;
+
+&lt;p&gt;And finally, there is collision. Create another sprite or colour for the object to collide with.
+Let’s say when the thing collides it stops. You want an if else block with a condition for hitting something in the slot at the top; a set Y Velocity to 0 block in the first gap and the gravity code in the else. It falls if it is not colliding otherwise it stops. To make it bounce, you would set the y velocity to Y velocity multiplied by a negative number e.g. -0.9.
+Attach this into the forever loop; deleting the previous gravity code.&lt;/p&gt;
+&lt;pre class=&quot;ScratchBlocks&quot;&gt;
+if &amp;lt;touching color [#b7ff03] ?&amp;gt; then
+  set (Y Velocity) to (0)
+else
+  change (Y Velocity) by (-3)
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;Big thanks to&lt;/em&gt; &lt;a href=&quot;&quot;&gt;&lt;em&gt;Jimmyrooster&lt;/em&gt;&lt;/a&gt; &lt;em&gt;for writing this article.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;the-final-code&quot;&gt;The final code&lt;/h2&gt;
+&lt;p&gt;You can see the final code &lt;a href=&quot;https://scratch.mit.edu/projects/382036051/&quot;&gt;here&lt;/a&gt;. Feel free to remix it or backpack it for use (but give credit).&lt;/p&gt;</content><author><name>Jimmyrooster</name></author><category term="Tutorials" /><category term="Tutorials/Physics" /><category term="physics" /><category term="gravity" /><category term="platformer" /><summary type="html">Learn how to create simple gravity with a collision.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://csourcesc.github.io/images/luis-cortes-martinez-G5WQNBpMrmI-unsplash.jpg" /><media:content medium="image" url="https://csourcesc.github.io/images/luis-cortes-martinez-G5WQNBpMrmI-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
