@@ -29,9 +29,24 @@
     </header>
     
     <div id="main" role="main" class="container">
-       <p class="callout callout--danger">
-        This website is not actively maintained anymore. Information might be outdated or incorrect.
-        Please write to locness47@gmail.com if you're interested in helping to maintain it.
+      {% capture tmp1 %}
+      This website is not actively maintained anymore. Information might be outdated or incorrect.
+      {% endcapture %}
+      {% include callout.html type="danger" content=tmp1 %}
+
+      {% capture tmp2 %}
+      For more and newer tutorials, check out the Tutorials section of the
+      <a href="https://scratch-wiki.info/">Scratch Wiki</a> in your preferred language.
+      {% endcapture %}
+      {% include callout.html type="tip" content=tmp2 %}
+
+      {% capture tmp3 %}
+      All the content of this website can be reused under specific conditions, as specified by the license at the bottom of each post. Please do reuse, improve and share it!
+      Please notify <em>locness3@e.email</em> if you do so, so I can add a link to it. You may also reach out for any question regarding the website and reuse (no Scratch questions, please - ask on
+      <a href="https://scratch.mit.edu/discuss/">Discuss Scratch</a> or another Scratch-related thing instead)
+      {% endcapture %}
+      {% include callout.html type="info" content=tmp3}
+
       </p>
       {{ content }}
     </div>
